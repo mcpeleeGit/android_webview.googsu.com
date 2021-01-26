@@ -3,10 +3,13 @@ package com.googsu.myapplication
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.messaging.FirebaseMessaging
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -28,6 +31,21 @@ class MainActivity : AppCompatActivity() {
             }
         }
         webView.loadUrl("https://www.googsu.com/")
+
+        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
+            if (!task.isSuccessful) {
+                Log.w("FCM", "Fetching FCM registration token failed", task.exception)
+                return@OnCompleteListener
+            }
+
+            // Get new FCM registration token
+            val token = task.result
+
+            // Log and toast
+            val msg = token.toString()
+            Log.d("FCM", msg)
+            Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
+        })
     }
 
     override fun onBackPressed() {

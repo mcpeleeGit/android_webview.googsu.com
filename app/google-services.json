@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "310018024711",
+    "project_id": "protean-set-136623",
+    "storage_bucket": "protean-set-136623.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310018024711:android:cbe1ad786e3fb8bf3151a2",
+        "android_client_info": {
+          "package_name": "com.googsu.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "310018024711-9svo3g5brfcttoe7ofbvvu8u60b44q7v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbpm2HSgeyI0kabZQGzcbC_lLvsA2d_Kc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "310018024711-9svo3g5brfcttoe7ofbvvu8u60b44q7v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
